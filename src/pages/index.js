@@ -11,6 +11,7 @@ const IndexPage = () => (
     <h1>Hi from the login page</h1>
     <p>Welcome to page 2</p>
     <Link to="/nav/">Go to the index page</Link>
+
   </Layout>
 )
 
