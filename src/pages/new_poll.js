@@ -3,14 +3,14 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-
+// Refrence: https://www.gatsbyjs.com/docs/building-a-contact-form/#sending-form-data
 export default function login() {
     return (
         <Layout>
             <Seo title="New Poll" />
 
             <div>
-                <form method="post" action="#">
+                <form method="post" action="REPLACE_THIS">
                     <label>
                         Title
                         <input type="text" name="title"/><br />
@@ -43,10 +43,11 @@ export default function login() {
                             <option value="HST">Hawaiian (UTC-10:00)</option>
                         </select>
                     </label>
+                    {/* TODO: Link needs to be changed when page is created */}
                     <Link to="/">Cancel</Link>
                     <button type="submit">Create</button>
                 </form>
             </div>
         </Layout>
-    ) // TODO: Link needs to be changed when page is created
+    )
 }
