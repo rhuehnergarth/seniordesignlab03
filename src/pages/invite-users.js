@@ -9,7 +9,7 @@ const InviteUsers = () => {
     <Layout>
         <Seo title ="Invite Users" />
         <div>
-            <h1>Thanks For Submitting!</h1>
+            <h1>Invite Users</h1>
         </div>
         <Link to="/">Go back to the homepage</Link>
     </Layout>

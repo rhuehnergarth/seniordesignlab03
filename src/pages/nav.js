@@ -24,7 +24,8 @@ const NavPage = () => (
       <Link to="/using-typescript/">Go to "Using TypeScript"</Link> <br />
       <Link to="/using-ssr">Go to "Using SSR"</Link> <br />
       <Link to="/using-dsg">Go to "Using DSG"</Link> <br />
-      <Link to="/thanks-for-submitting">Go to "Thanks for submitting"</Link>
+      <Link to="/thanks-for-submitting">Go to "Thanks for submitting"</Link> <br />
+      <Link to="/invite-users">Go to "Invite Users"</Link>
     </p>
   </Layout>
 )
