@@ -156,7 +156,12 @@ hr {
   height: 1px;
 }
 button,
-input,
+input {
+  height: 20px;
+  flex: 0 0 200px;
+  margin-left: 10px;
+  overflow: visible;
+}
 optgroup,
 select,
 textarea {
@@ -167,9 +172,6 @@ optgroup {
   font-weight: 700;
 }
 button,
-input {
-  overflow: visible;
-}
 button,
 select {
   text-transform: none;
@@ -594,4 +596,37 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+}
+
+.small_column {
+  flex: 25%;
+}
+
+.big_column {
+  flex: 75%;
+}
+
+label {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  text-align: left;
+  width: 400px;
+  line-height: 26px;
+  margin-bottom: 10px;
+}
+
+select {
+    height: 20px;
+    flex: 0 0 200px;
+    margin-left: 10px;
+    overflow: visible;
 }
