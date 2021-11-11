@@ -6,6 +6,25 @@ module.exports = {
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
+    {
+      resolve: `gatsby-source-mysql`,
+      options: {
+        connectionDetails: {
+          host: 'ls-e7c2f6b620a8393883afd3965c42f7e2c7974d26.cvujusmtyqxd.us-east-2.rds.amazonaws.com',
+          user: 'dbmasteruser',
+          password: 'Jt7E6J]_8qbcoO#7lz2].yb,$>%e_(Xy',
+          database: 'pollingApp'
+        },
+        queries: [
+          {
+            statement: 'SELECT * FROM Admins',
+            idFieldName: 'idAdmins',
+            name: 'admin'
+          }
+        ]
+      }
+    },
+    
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
@@ -36,3 +55,4 @@ module.exports = {
     // `gatsby-plugin-offline`,
   ],
 }
+

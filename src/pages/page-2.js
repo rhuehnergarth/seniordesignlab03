@@ -3,14 +3,29 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { graphql  } from 'gatsby'
 
-const SecondPage = () => (
-  <Layout>
-    <Seo title="Page two" />
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
-  </Layout>
-)
-
+const SecondPage = ({data}) => {
+  return (
+    <Layout>
+      <Seo title="Page two" />
+      <h1>Hi from the second page</h1>
+      <p>{data.allMysqlAdmin.edges[0].node.username}</p>
+      <Link to="/">Go back to the homepage</Link>
+    </Layout>
+  )
+}
+export const query = graphql`
+  query {
+    allMysqlAdmin{
+      edges {
+        node {
+          idAdmins
+          username
+          password
+        }
+      }
+    }
+  }
+`
 export default SecondPage
